@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Tip Calculator</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <style>
+         header {
+         text-align: center;
+         padding: 3px;
+         background-color: grey;
+         color: white;
+         }
+      </style>
+   </head>
+   <header>
+      <h3> Tip Calcuator</h3>
+   </header>
+   <body>
+      <div class="section_subtitle text-center pt-5 ">
+         <h1>Have a Nice Day</h1>
+      </div>
+      <div class="container mt-xl-4 pt-5 w-50 text-center">
+         <div class="" style="width: 700px;">
+            	<!--calculator starts-->
+               <form >
+                  <p>How much was your bill?
+                     <input id="amount" type="Number" placeholder="Bill Amount" min=1 required="required">
+                  <p id="amountValidation"></p>
+                  <p>
+                     How was your service?
+                     <select id="feedback" required="required">
+                        <option disabled selected value="0">-- Choose an Option --</option>
+                        <option value="0.15"> Good</option>
+                        <option value="0.1"> It was OK</option>
+                        <option value="0.05"> Bad</option>
+                     </select>
+                  <p id="feedbackValidation"></p>
+                  <p>Split into how many people?     
+                     <input id="spiltinto" type="Number" placeholder="Number of People" min=1 required="required"><br>
+                  <p id="numberofpeopleValidation"></p>
+                  <button type="button" id="calculate">Calculate!</button>
+               </form>
+               <!--calculator end-->
+               <!--for display tip for each person-->
+               <div id="totalTip">
+                  Tip:
+                  ₹<span id="tip"></span>
+                  <small>each</small>
+                <!--for display total tip-->
+               </div>
+               <div id="t_tipp">
+                  TotalTip:
+                  ₹<span id="t_tip"></span>
+               </div>
+               <!--javascript file linked-->
+               <script type="text/javascript" src="js.js"></script>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
